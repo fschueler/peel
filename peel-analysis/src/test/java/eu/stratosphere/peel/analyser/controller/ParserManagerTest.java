@@ -24,7 +24,7 @@ import java.io.FileReader;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.util.ArrayList;
-
+// TODO: Add documentation
 /**
  * Created by Fabian on 06.01.2015.
  */

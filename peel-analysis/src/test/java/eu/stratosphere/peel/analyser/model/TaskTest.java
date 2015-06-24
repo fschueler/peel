@@ -7,7 +7,7 @@ import org.hibernate.Session;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
+// TODO: Add documentation
 public class TaskTest {
     private ORM orm = HibernateUtil.getORM();
 

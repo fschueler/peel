@@ -11,7 +11,7 @@ import eu.stratosphere.peel.core.graph.{Node, createGraph}
 import net.sourceforge.argparse4j.impl.Arguments
 import net.sourceforge.argparse4j.inf.{Namespace, Subparser}
 import org.springframework.context.ApplicationContext
-
+// TODO: Add documentation
 class Run extends Command {
 
   override def name() = "suite:run"

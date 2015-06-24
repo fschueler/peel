@@ -9,7 +9,7 @@ import net.sourceforge.argparse4j.impl.Arguments
 import net.sourceforge.argparse4j.inf.{Namespace, Subparser}
 import org.springframework.context.ApplicationContext
 
-
+// TODO: Add documentation
 class Analyse extends Command {
 
   override def name() = "suite:etl"

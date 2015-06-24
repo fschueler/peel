@@ -10,7 +10,7 @@ import scala.collection.mutable.ListBuffer
 /** A model for the different configuration file types specified by systems (e.g. .yaml, .env, hosts)
  *
  */
-// TODO document
+// TODO: Add documentation
 trait Model {
 
   case class Pair(name: String, value: Any) {}

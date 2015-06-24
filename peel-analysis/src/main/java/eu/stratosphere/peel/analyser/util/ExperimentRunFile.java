@@ -3,7 +3,7 @@ package eu.stratosphere.peel.analyser.util;
 import eu.stratosphere.peel.analyser.model.ExperimentRun;
 
 import java.io.File;
-
+// TODO: Add documentation
 public class ExperimentRunFile {
     private ExperimentRun experimentRun;
     private File file;

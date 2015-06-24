@@ -6,7 +6,7 @@ import net.sourceforge.argparse4j.inf.Subparser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationContext;
-
+// TODO: Add documentation
 abstract public class Command {
 
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());

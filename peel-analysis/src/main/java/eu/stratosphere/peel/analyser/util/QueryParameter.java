@@ -1,5 +1,5 @@
 package eu.stratosphere.peel.analyser.util;
-
+// TODO: Add documentation
 /**
  * A parameter to be added to a query.
  * Created by Fabian on 04.01.2015.

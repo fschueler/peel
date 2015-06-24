@@ -16,7 +16,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
-
+// TODO: Add documentation
 public class ParserManager {
 
     private final LinkedList<ExperimentRunFile> experimentRunFileList = new LinkedList<>();
