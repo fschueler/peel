@@ -1,0 +1,80 @@
+################################################################################
+#  Licensed to the Apache Software Foundation (ASF) under one
+#  or more contributor license agreements.  See the NOTICE file
+#  distributed with this work for additional information
+#  regarding copyright ownership.  The ASF licenses this file
+#  to you under the Apache License, Version 2.0 (the
+#  "License"); you may not use this file except in compliance
+#  with the License.  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+# limitations under the License.
+################################################################################
+
+#==============================================================================
+# Deployment Options
+#==============================================================================
+
+# location where the pserver binaries are deployed on every node
+{{#env.archive.dir}}env.archive.dir: {{env.archive.dir}}{{/env.archive.dir}}{{^env.archive.dir}}env.archive.dir: /data/$USER/pserver{{/env.archive.dir}}
+
+#==============================================================================
+# Common Options
+#==============================================================================
+
+# the profile to use with the profile configuration
+{{#env.profile}}enf.profile: {{env.profile}}{{/env.profile}}{{^env.profile}}#enf.profile: {{/env.profile}}
+
+#==============================================================================
+# JAVA Options
+#==============================================================================
+
+# The path to the Java installation to use.
+#
+{{#env.java.home}}env.java.home: {{env.java.home}}{{/env.java.home}}{{^env.java.home}}env.java.home: $JAVA_HOME{{/env.java.home}}
+
+# The path to the Java installation to use.
+#
+{{#env.java.opts}}env.java.opts: {{env.java.opts}}{{/env.java.opts}}{{^env.java.opts}}# env.java.opts: {{/env.java.opts}}
+
+
+#==============================================================================
+# Nodes
+#==============================================================================
+
+# The node's heap size
+#
+{{#env.node.heap.mb}}env.node.heap.mb: {{env.node.heap.mb}}{{/env.node.heap.mb}}{{^env.node.heap.mb}}env.node.heap.mb: 512{{/env.node.heap.mb}}
+
+#==============================================================================
+# HDFS
+#==============================================================================
+
+# Path to the Hadoop configuration directory.
+#
+# This configuration is used when writing into HDFS. Unless specified otherwise,
+# HDFS file creation will use HDFS default settings with respect to block-size,
+# replication factor, etc.
+#
+# You can also directly specify the paths to hdfs-default.xml and hdfs-site.xml
+# via keys 'fs.hdfs.hdfsdefault' and 'fs.hdfs.hdfssite'.
+#
+{{#fs.hdfs.hadoopconf}}fs.hdfs.hadoopconf: {{fs.hdfs.hadoopconf}}{{/fs.hdfs.hadoopconf}}{{^fs.hdfs.hadoopconf}}# fs.hdfs.hadoopconf: /path/to/hadoop/conf/{{/fs.hdfs.hadoopconf}}
+
+
+# The absolute path of Hadoop’s own configuration file “hdfs-default.xml”.
+#
+{{#fs.hdfs.hdfsdefault}}fs.hdfs.hdfsdefault: {{fs.hdfs.hdfsdefault}}{{/fs.hdfs.hdfsdefault}}{{^fs.hdfs.hdfsdefault}}# fs.hdfs.hdfsdefault: null{{/fs.hdfs.hdfsdefault}}
+
+# The absolute path of Hadoop’s own configuration file “hdfs-site.xml”.
+#
+{{#fs.hdfs.hdfssite}}fs.hdfs.hdfssite: {{fs.hdfs.hdfssite}}{{/fs.hdfs.hdfssite}}{{^fs.hdfs.hdfssite}}# fs.hdfs.hdfssite: null{{/fs.hdfs.hdfssite}}
+
+#==============================================================================
+# File Systems
+#==============================================================================

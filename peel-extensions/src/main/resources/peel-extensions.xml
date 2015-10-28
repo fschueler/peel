@@ -99,4 +99,11 @@
         <constructor-arg name="lifespan" value="EXPERIMENT"/>
     </bean>
 
+    <!-- PServer -->
+    <bean id="pserver" class="org.peelframework.pserver.beans.system.PServer" parent="system">
+        <constructor-arg name="version" value="1.0-SNAPSHOT" />
+        <constructor-arg name="configKey" value="pserver"/>
+        <constructor-arg name="lifespan" value="EXPERIMENT"/>
+    </bean>
+
 </beans>

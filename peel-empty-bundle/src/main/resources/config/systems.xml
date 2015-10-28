@@ -39,6 +39,18 @@
         </constructor-arg>
     </bean>
 
+    <!-- PServer (overridden 'pserver' bean that depends on 'hdfs-2.7.1' -->
+    <bean id="pserver-1.0" class="org.peelframework.pserver.beans.system.PServer" parent="system">
+        <constructor-arg name="version" value="1.0"/>
+        <constructor-arg name="configKey" value="pserver" />
+        <constructor-arg name="lifespan" value="EXPERIMENT"/>
+        <constructor-arg name="dependencies">
+            <set value-type="org.peelframework.core.beans.system.System">
+                <ref bean="hdfs-2.7.1"/>
+            </set>
+        </constructor-arg>
+    </bean>
+
     <!--************************************************************************
     * Base experiments beans
     *************************************************************************-->
